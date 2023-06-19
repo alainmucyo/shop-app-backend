@@ -76,9 +76,12 @@ class Handler extends ExceptionHandler
                 return response()->json(['message' => $exception->validator->errors()], 422);
             }
 
-            // 401
             if ($exception instanceof \Illuminate\Auth\AuthenticationException) {
                 return response()->json(['message' => 'Unauthenticated'], 401);
+            }
+
+            if ($exception instanceof \Illuminate\Auth\Access\AuthorizationException) {
+                return response()->json(['message' => 'Forbidden'], 403);
             }
 
             return response()->json(['message' => 'Server error'], 500);
