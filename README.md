@@ -47,7 +47,7 @@ The Online Shopping Platform is a robust online store designed to track which it
 
 ## API Documentation
 
-A Postman collection has been included for API documentation. You can test the API using the following credentials:
+API doc can be accessed here: https://documenter.getpostman.com/view/11889963/2s93sjUUfw 
 
 - **Admin user**:
 - Email: `admin@example.com`
